@@ -1,0 +1,20 @@
+{
+  "pluginAlias": "ACHeatingPlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "AC Heating Heat Pump",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "ip": { "title": "IP Address", "type": "string", "required": true },
+      "username": { "title": "Username", "type": "string", "required": true },
+      "password": { "title": "Password", "type": "string", "format": "password", "required": true },
+      "heatingRegister": { "title": "Heating Target Register", "type": "string", "default": "__R39940_REAL_.1f" },
+      "dhwRegister": { "title": "DHW Target Register", "type": "string", "default": "__R30257_REAL_.1f" },
+      "awayRegister": { "title": "Away Mode Register", "type": "string", "default": "__R40265_USINT_u" },
+      "heatingIndex": { "title": "Heating N Index", "type": "number", "default": 1 },
+      "dhwIndex": { "title": "DHW N Index", "type": "number", "default": 40 },
+      "pollInterval": { "title": "Polling Interval (ms)", "type": "number", "default": 10000 }
+    }
+  }
+}
